@@ -13,7 +13,7 @@ st.set_page_config(
 )
 
 # ---------- Cargar pipeline ----------
-pipe = joblib.load("../modeling/xgb_stockout_pipeline.pkl")
+pipe = joblib.load("modeling/xgb_stockout_pipeline.pkl")
 
 THRESHOLD = 0.325
 
