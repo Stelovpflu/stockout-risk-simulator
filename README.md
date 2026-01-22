@@ -15,11 +15,7 @@ La app permite simular escenarios operativos (“what-if”) ajustando variables
 
 ¿Qué combinaciones de demanda, clima, calendario y producto incrementan el riesgo de stockout, y cuándo debo anticiparme?
 
-El output del modelo no es solo una clase, sino una:
-
-probabilidad de stockout,
-
-convertida en acción mediante un threshold operativo optimizado para recall.
+El output del modelo no es solo una clase, sino una probabilidad de stockout, convertida en acción mediante un threshold operativo optimizado para recall.
 
 ---
 
@@ -37,7 +33,7 @@ Train: ~4.5M registros
 
 Eval: ~350K registros
 
-El target NO viene dado: se construye a partir de información operacional real de stock.
+El target NO viene dado, se construye a partir de información operacional real de stock.
 
 ---
 
