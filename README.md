@@ -1,1 +1,0 @@
-# stockout-risk-simulator
