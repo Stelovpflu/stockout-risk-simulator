@@ -1,5 +1,6 @@
 
-📦 Stockout Risk Simulator – Retail Supply Chain
+📦 **Stockout Risk Simulator – Retail Supply Chain**
+
 🔍 Business Problem
 
 En retail, los quiebres de stock (stockouts) generan pérdida directa de ventas, mala experiencia del cliente e ineficiencias en planificación e inventario.
@@ -10,7 +11,7 @@ La app permite simular escenarios operativos (“what-if”) ajustando variables
 
 ---
 
-🎯 Business Decision Simulated
+🎯 **Business Decision Simulated**
 
 ¿Qué combinaciones de demanda, clima, calendario y producto incrementan el riesgo de stockout, y cuándo debo anticiparme?
 
@@ -22,7 +23,7 @@ convertida en acción mediante un threshold operativo optimizado para recall.
 
 ---
 
-🧠 Dataset
+🧠 **Dataset**
 
 Fuente: HuggingFace
 
@@ -40,7 +41,7 @@ El target NO viene dado: se construye a partir de información operacional real 
 
 ---
 
-🛠️ Feature Engineering
+🛠️ **Feature Engineering**
 🎯 Target
 stockout = 1  → riesgo de quiebre de stock
 stockout = 0  → stock suficiente
@@ -86,7 +87,7 @@ Se elimina leakage directo y columnas no accionables para la app.
 
 ---
 
-🤖 Model
+🤖 **Model**
 
 Algoritmo: XGBoost (Gradient Boosted Trees)
 
@@ -106,7 +107,7 @@ Seleccionados mediante comparación contra RF y GB + tuning focalizado.
 
 ---
 
-📊 Performance (Eval Set)
+📊 **Performance (Eval Set)**
 Métrica	Valor
 ROC-AUC	0.75
 PR-AUC	0.72
@@ -120,7 +121,7 @@ Optimizado para recall ≈ 0.87 en stockouts
 
 ---
 
-🚀 Streamlit App – Stockout Risk Simulator
+🚀 **Streamlit App – Stockout Risk Simulator**
 
 La app permite:
 
@@ -144,7 +145,7 @@ demos comerciales.
 
 ---
 
-📂 Project Structure
+📂 **Project Structure**
 ├─ app/
 │   └─ streamlit_app.py
 ├─ data_prep/
@@ -157,7 +158,7 @@ demos comerciales.
 
 ---
 
-▶️ How to Run
+▶️ **How to Run**
 pip install -r requirements.txt
 streamlit run app/streamlit_app.py
 
