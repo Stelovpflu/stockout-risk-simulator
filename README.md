@@ -5,9 +5,9 @@
 
 En retail, los quiebres de stock (stockouts) generan pérdidas directas de ventas, una mala experiencia del cliente e ineficiencias en la planificación y el inventario.
 
-A través de esta aplicación interactiva construida con Streamlit para estimar el riesgo de quiebre de stock (stockout) en entornos retail, utilizando un modelo de Machine Learning (XGBoost) entrenado sobre datos reales de operaciones de inventario, ventas, clima y calendario.
+A través de esta aplicación interactiva construida con Streamlit podra estimar el riesgo de quiebre de stock (stockout) en entornos retail, utilizando un modelo de Machine Learning (XGBoost) entrenado sobre datos reales de operaciones de inventario, ventas, clima y calendario.
 
-La app permite simular escenarios operativos (“what-if”) ajustando variables clave (demanda, descuentos, clima, producto y tienda) y observar cómo cambia la probabilidad de stockout, apoyando decisiones de planificación de inventario y reposición.
+La app permite simular escenarios operativos ajustando variables clave como demanda, descuentos, clima, producto y tienda y observar cómo cambia la probabilidad de stockout, apoyando decisiones de planificación de inventario y reposición.
 
 ---
 🎯 **Business Decision Simulated**
@@ -18,6 +18,7 @@ El output del modelo no es solo una clase, sino una probabilidad de stockout, co
 
 ---
 🚀 Simulador 👉 Streamlit Cloud App
+
 https://sl-stockout-risk-simulator.streamlit.app/
 
 ---
@@ -31,9 +32,9 @@ Tipo: datos reales de retail (ventas, stock, clima, calendario)
 
 Tamaño:
 
-Train: ~4.5M registros
+Entrenamiento(Train): ~4.5M registros
 
-Eval: ~350K registros
+Evaluación(Eval): ~350K registros
 
 El target NO viene dado, se construye a partir de información operacional real de stock.
 
@@ -51,60 +52,10 @@ Construido a partir de:
 
 stock_hour6_22_cnt (conteo real de stock disponible)
 
-
-🔢 **Numéricas**
-
-sale_amount
-
-discount
-
-precpt
-
-avg_temperature
-
-avg_humidity
-
-avg_wind_level
-
-day, month, dayofweek
-
-
-🏷️ **Categóricas**
-
-city_id
-
-store_id
-
-management_group_id
-
-first_category_id
-
-second_category_id
-
-third_category_id
-
-product_id
-
-Se elimina leakage directo y columnas no accionables para la app.
-
 ---
 🤖 **Model**
 
 Algoritmo: XGBoost (Gradient Boosted Trees)
-
-Encoding categórico: OrdinalEncoder (eficiente y deployable)
-
-Pipeline: preprocessing + model
-
-🔧 Hiperparámetros finales
-max_depth = 6
-learning_rate = 0.1
-n_estimators = 200
-subsample = 0.8
-colsample_bytree = 0.8
-
-
-Seleccionados mediante comparación contra RF y GB + tuning focalizado.
 
 ---
 📊 **Performance (Eval Set)**
@@ -125,25 +76,9 @@ Optimizado para recall ≈ 0.87 en stockouts
 ---
 🚀 **Streamlit App – Stockout Risk Simulator**
 
-La app permite:
+La app permite ajustar variables clave (demanda, clima, calendario), seleccionar producto, tienda y categorías y obtener probabilidad de stockout, decisión operativa (stockout / ok).
 
-ajustar variables clave (demanda, clima, calendario),
-
-seleccionar producto, tienda y categorías,
-
-obtener:
-
-probabilidad de stockout
-
-decisión operativa (stockout / ok)
-
-👉 Pensada para:
-
-planners,
-
-supply chain managers,
-
-demos comerciales.
+👉 Pensada para planners, supply chain managers y demos comerciales.
 
 ---
 📂 **Project Structure**
