@@ -20,8 +20,8 @@ THRESHOLD = 0.325
 # ---------- Título ----------
 st.title("📦 Stockout Risk Simulator")
 st.markdown(
-    "Simula escenarios *what-if* para estimar **riesgo de quiebre de stock** "
-    "en retail usando un modelo XGBoost entrenado en datos reales."
+    "Simula escenarios para estimar **riesgo de quiebre de stock** "
+    "en retail usando un modelo XGBoost entrenado con datos reales."
 )
 
 # ---------- Sidebar ----------
