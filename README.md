@@ -42,6 +42,7 @@ El target NO viene dado: se construye a partir de información operacional real 
 ---
 
 🛠️ **Feature Engineering**
+
 🎯 Target
 stockout = 1  → riesgo de quiebre de stock
 stockout = 0  → stock suficiente
