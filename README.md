@@ -156,14 +156,23 @@ demos comerciales.
 📂 **Project Structure**
 
 ├─ app/
+
 │   └─ streamlit_app.py
+
 ├─ data_prep/
+
 │   ├─ __init__.py
+
 │   └─ prepare_data.py
+
 ├─ modeling/
+
 │   └─ xgb_stockout_pipeline.pkl
+
 ├─ requirements.txt
+
 └─ README.md
+
 
 ---
 
