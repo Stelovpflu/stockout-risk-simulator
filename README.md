@@ -43,8 +43,10 @@ El target NO viene dado: se construye a partir de información operacional real 
 
 🛠️ **Feature Engineering**
 
-🎯 Target
+🎯 **Target**
+
 stockout = 1  → riesgo de quiebre de stock
+
 stockout = 0  → stock suficiente
 
 
@@ -52,7 +54,8 @@ Construido a partir de:
 
 stock_hour6_22_cnt (conteo real de stock disponible)
 
-🔢 Numéricas
+
+🔢 **Numéricas**
 
 sale_amount
 
@@ -68,7 +71,8 @@ avg_wind_level
 
 day, month, dayofweek
 
-🏷️ Categóricas
+
+🏷️ **Categóricas**
 
 city_id
 
@@ -109,13 +113,16 @@ Seleccionados mediante comparación contra RF y GB + tuning focalizado.
 ---
 
 📊 **Performance (Eval Set)**
+
 Métrica	Valor
 ROC-AUC	0.75
 PR-AUC	0.72
 Accuracy	0.62
-🎯 Threshold Operativo
+
+🎯 **Threshold Operativo**
 
 Threshold = 0.325
+
 
 Optimizado para recall ≈ 0.87 en stockouts
 (priorizando evitar quiebres, incluso con más falsos positivos)
@@ -147,6 +154,7 @@ demos comerciales.
 ---
 
 📂 **Project Structure**
+
 ├─ app/
 │   └─ streamlit_app.py
 ├─ data_prep/
@@ -160,6 +168,7 @@ demos comerciales.
 ---
 
 ▶️ **How to Run**
+
 pip install -r requirements.txt
 streamlit run app/streamlit_app.py
 
