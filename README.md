@@ -3,14 +3,13 @@
 
 🔍 Business Problem
 
-En retail, los quiebres de stock (stockouts) generan pérdida directa de ventas, mala experiencia del cliente e ineficiencias en planificación e inventario.
+En retail, los quiebres de stock (stockouts) generan pérdidas directas de ventas, una mala experiencia del cliente e ineficiencias en la planificación y el inventario.
 
-A traves de esta aplicación interactiva construida con Streamlit para estimar el riesgo de quiebre de stock (stockout) en entornos retail, utilizando un modelo de Machine Learning (XGBoost) entrenado sobre datos reales de operaciones de inventario, ventas, clima y calendario.
+A través de esta aplicación interactiva construida con Streamlit para estimar el riesgo de quiebre de stock (stockout) en entornos retail, utilizando un modelo de Machine Learning (XGBoost) entrenado sobre datos reales de operaciones de inventario, ventas, clima y calendario.
 
 La app permite simular escenarios operativos (“what-if”) ajustando variables clave (demanda, descuentos, clima, producto y tienda) y observar cómo cambia la probabilidad de stockout, apoyando decisiones de planificación de inventario y reposición.
 
 ---
-
 🎯 **Business Decision Simulated**
 
 ¿Qué combinaciones de demanda, clima, calendario y producto incrementan el riesgo de stockout, y cuándo debo anticiparme?
@@ -18,7 +17,10 @@ La app permite simular escenarios operativos (“what-if”) ajustando variables
 El output del modelo no es solo una clase, sino una probabilidad de stockout, convertida en acción mediante un threshold operativo optimizado para recall.
 
 ---
+🚀 Simulador 👉 Streamlit Cloud App
+https://sl-stockout-risk-simulator.streamlit.app/
 
+---
 🧠 **Dataset**
 
 Fuente: HuggingFace
@@ -36,7 +38,6 @@ Eval: ~350K registros
 El target NO viene dado, se construye a partir de información operacional real de stock.
 
 ---
-
 🛠️ **Feature Engineering**
 
 🎯 **Target**
@@ -87,7 +88,6 @@ product_id
 Se elimina leakage directo y columnas no accionables para la app.
 
 ---
-
 🤖 **Model**
 
 Algoritmo: XGBoost (Gradient Boosted Trees)
@@ -107,7 +107,6 @@ colsample_bytree = 0.8
 Seleccionados mediante comparación contra RF y GB + tuning focalizado.
 
 ---
-
 📊 **Performance (Eval Set)**
 
 Métrica	Valor
@@ -124,7 +123,6 @@ Optimizado para recall ≈ 0.87 en stockouts
 (priorizando evitar quiebres, incluso con más falsos positivos)
 
 ---
-
 🚀 **Streamlit App – Stockout Risk Simulator**
 
 La app permite:
@@ -148,7 +146,6 @@ supply chain managers,
 demos comerciales.
 
 ---
-
 📂 **Project Structure**
 
 ├─ app/
@@ -171,13 +168,20 @@ demos comerciales.
 
 
 ---
-
 ▶️ **How to Run**
 
 pip install -r requirements.txt
 streamlit run app/streamlit_app.py
 
 ---
+⚠️ Notas
+Este repositorio contiene **solo el código de inferencia**.
+El entrenamiento del modelo se realizó por separado.
+
+---
+👤 Autor
+**Steve Loveday**  
+Data Scientist | Business Analytics | Machine Learning
 
 
 
